@@ -1,31 +1,35 @@
 package com.nortetec.imovel
 
-import jakarta.persistence.*
-import org.hibernate.Hibernate
+import org.springframework.data.annotation.Id
+import org.springframework.data.mongodb.core.mapping.Document
 import java.util.*
 
-@Entity
+@Document
 data class Imovel(
     val endereco: String,
     val valorAluguel: Double,
 ) {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(updatable = false, unique = true, nullable = false)
     val id: UUID? = null
-
     override fun equals(other: Any?): Boolean {
         if (this === other) return true
-        if (other == null || Hibernate.getClass(this) != Hibernate.getClass(other)) return false
+        if (javaClass != other?.javaClass) return false
+
         other as Imovel
 
-        return id != null && id == other.id
+        if (endereco != other.endereco) return false
+        if (valorAluguel != other.valorAluguel) return false
+        return id == other.id
     }
 
-    override fun hashCode(): Int = javaClass.hashCode()
+    override fun hashCode(): Int {
+        var result = endereco.hashCode()
+        result = 31 * result + valorAluguel.hashCode()
+        result = 31 * result + (id?.hashCode() ?: 0)
+        return result
+    }
 
-    @Override
     override fun toString(): String {
-        return this::class.simpleName + "(id = $id , endereco = $endereco , valorAluguel = $valorAluguel )"
+        return "Imovel(endereco='$endereco', valorAluguel=$valorAluguel, id=$id)"
     }
 }
