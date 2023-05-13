@@ -8,7 +8,7 @@ import org.springframework.data.mongodb.core.mapping.Document
 import java.time.LocalDate
 import java.util.*
 
-@Document
+@Document(collection = "tab_locacao")
 data class Locacao(
     val dataInicio: LocalDate,
     val dataFim: LocalDate,

@@ -4,7 +4,7 @@ import org.springframework.data.annotation.Id
 import org.springframework.data.mongodb.core.mapping.Document
 import java.util.*
 
-@Document
+@Document(collection = "tab_locarario")
 data class Locatario(
     val nome: String,
     val email: String,
