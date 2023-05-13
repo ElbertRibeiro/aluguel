@@ -2,7 +2,7 @@ package com.nortetec.imovel
 
 import org.springframework.data.mongodb.core.mapping.Document
 
-@Document
+@Document(collection = "tab_imovel")
 data class Imovel(
     val endereco: String,
     val valorAluguel: Double,
