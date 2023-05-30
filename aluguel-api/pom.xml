@@ -18,6 +18,21 @@
         <kotlin.version>1.7.22</kotlin.version>
     </properties>
 
+    <dependencies>
+        <dependency>
+            <groupId>${parent.groupId}</groupId>
+            <artifactId>${parent.artifactId}-core</artifactId>
+            <version>${parent.version}</version>
+        </dependency>
+
+        <!--SPRING-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+    </dependencies>
+
     <build>
         <sourceDirectory>${project.basedir}/src/main/kotlin</sourceDirectory>
         <testSourceDirectory>${project.basedir}/src/test/kotlin</testSourceDirectory>
@@ -29,6 +44,7 @@
             <plugin>
                 <groupId>org.jetbrains.kotlin</groupId>
                 <artifactId>kotlin-maven-plugin</artifactId>
+                <version>${kotlin.version}</version>
                 <configuration>
                     <args>
                         <arg>-Xjsr305=strict</arg>
