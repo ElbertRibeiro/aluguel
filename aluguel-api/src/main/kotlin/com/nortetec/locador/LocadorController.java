@@ -6,10 +6,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("locador")
-public class LocadorResolver {
+public class LocadorController {
     private final LocadorService service;
 
-    public LocadorResolver(LocadorService service) {
+    public LocadorController(LocadorService service) {
         this.service = service;
     }
 

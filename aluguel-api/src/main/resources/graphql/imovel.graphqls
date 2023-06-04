@@ -1,9 +1,0 @@
-type Imovel {
-    endereco: String,
-    valorAluguel: String
-}
-
-input ImovelInput {
-    endereco: String,
-    valorAluguel: String
-}

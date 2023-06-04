@@ -1,9 +1,0 @@
-type Query {
-    hello: String
-    listarLocatario: [Locatario]
-    listaImoveis: [Imovel]
-}
-
-type Mutation {
-    salvaImoveis(imovel: ImovelInput): String
-}
