@@ -9,9 +9,9 @@ import java.util.List;
 @RestController
 @RequestMapping("locatario")
 public class LocatarioController {
-    private final LocatarioOperations service;
+    private final LocatarioService service;
 
-    public LocatarioController(LocatarioOperations service) {
+    public LocatarioController(LocatarioService service) {
         this.service = service;
     }
 
