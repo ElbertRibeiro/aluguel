@@ -16,7 +16,7 @@ public class ImovelController {
     }
 
     @GetMapping
-    public List<ImovelImpl> listaImoveis() {
+    public List<Imovel> listaImoveis() {
         return service.listaImovel();
     }
 }

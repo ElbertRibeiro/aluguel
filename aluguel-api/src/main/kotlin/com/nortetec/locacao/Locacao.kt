@@ -1,6 +1,6 @@
 package com.nortetec.locacao
 
-import com.nortetec.imovel.ImovelImpl
+import com.nortetec.imovel.Imovel
 import com.nortetec.locatario.Locatario
 import org.springframework.data.annotation.Id
 import org.springframework.data.mongodb.core.mapping.DBRef
@@ -15,7 +15,7 @@ data class Locacao(
     @DBRef
     val locatario: Locatario,
     @DBRef
-    val imovel: ImovelImpl
+    val imovel: Imovel
 ) {
     @Id
     val id: UUID? = null

@@ -13,7 +13,7 @@ public class ImovelServiceImpl implements ImovelService {
     }
 
     @Override
-    public List<ImovelImpl> listaImovel() {
+    public List<Imovel> listaImovel() {
         return repository.findAll();
     }
 }
