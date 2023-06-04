@@ -4,7 +4,7 @@ import org.springframework.graphql.data.method.annotation.QueryMapping
 import org.springframework.web.bind.annotation.RestController
 
 @RestController
-class LocatarioResolver(val service: LocatarioService) {
+class LocatarioResolver(val service: LocatarioOperations) {
 
     @QueryMapping
     fun hello(): String {

@@ -17,4 +17,9 @@ public class LocatarioService implements LocatarioOperations {
     public List<Locatario> listaLocatario() {
         return repository.findAll();
     }
+
+    @Override
+    public String hello() {
+        return "oi mundo";
+    }
 }
