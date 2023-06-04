@@ -2,13 +2,13 @@ package com.nortetec.imovel;
 
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.io.Serial;
 import java.io.Serializable;
 
 @Document(collection = "tab_imovel")
 public class Imovel implements Serializable {
-
-    private static final Serializable serializable = 1L;
-
+    @Serial
+    private static final long serialVersionUID = -5666426053006243716L;
     private String endereco;
     private Double valorAluguel;
 
