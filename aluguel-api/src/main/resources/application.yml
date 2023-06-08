@@ -1,0 +1,7 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb+srv://usr_aluguel:senha1@aluguel.kcsvjif.mongodb.net/?retryWrites=true&w=majority
+      database: aluguel
+  jpa:
+    open-in-view: false
