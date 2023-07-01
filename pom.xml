@@ -11,6 +11,7 @@
     <name>aluguel</name>
     <description>Demo project for Spring Boot</description>
     <modules>
+        <module>aluguel-db</module>
         <module>aluguel-core</module>
         <module>aluguel-api</module>
     </modules>
